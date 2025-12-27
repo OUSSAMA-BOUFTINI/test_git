@@ -1,28 +1,15 @@
+#include "personne.h"
 #include <iostream>
-#include <string>
 using namespace std;
 
-class Personne {
-private:
-    string nom;
-    int age;
+// Constructeur
+Personne::Personne(string n, int a) {
+    nom = n;
+    age = a;
+}
 
-public:
-    // Constructeur
-    Personne(string n, int a) {
-        nom = n;
-        age = a;
-    }
-
-    // Méthode
-    void afficher() {
-        cout << "Nom : " << nom << endl;
-        cout << "Age : " << age << endl;
-    }
-};
-
-int main() {
-    Personne p1("Oussama", 22);
-    p1.afficher();
-    return 0;
+// Méthode afficher
+void Personne::afficher() {
+    cout << "Nom : " << nom << endl;
+    cout << "Age : " << age << endl;
 }
